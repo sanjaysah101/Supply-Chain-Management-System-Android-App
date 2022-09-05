@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         EditText username = (EditText) findViewById(R.id.userName);
         EditText password = (EditText) findViewById(R.id.password);
+        TextView signUpLinkBtn = (TextView) findViewById(R.id.signUpTextBtn);
         MaterialButton loginBtn = (MaterialButton) findViewById(R.id.loginbtn);
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -36,5 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         });
+
+
     }
 }

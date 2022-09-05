@@ -9,21 +9,36 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
-
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/signup"
-            android:text="SIGN IN"
+            android:text="Sign Up"
             android:textColor="@color/white"
             android:textSize="35sp"
             android:textStyle="bold"
             android:layout_margin="50dp"
             android:gravity="center"/>
-
+        <EditText
+            android:id="@+id/userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="#30ffffff"
+            android:drawableStart="@drawable/ic_baseline_person_outline_24"
+            android:drawablePadding="20dp"
+            android:hint="Username"
+            android:inputType="textPersonName"
+            android:padding="20dp"
+            android:textColor="@color/lightWhite"
+            android:textColorHint="@color/lightWhite"
+            android:textSize="24sp" />
         <EditText
             android:id="@+id/userEmail"
             android:layout_width="match_parent"
@@ -35,11 +50,13 @@
             android:background="#30ffffff"
             android:drawableStart="@drawable/ic_baseline_person_outline_24"
             android:drawablePadding="20dp"
-            android:hint="user@gmail.com"
+            android:inputType="textEmailAddress"
+            android:hint="email"
             android:padding="20dp"
             android:textColor="@color/lightWhite"
             android:textColorHint="@color/lightWhite"
             android:textSize="24sp" />
+
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,39 +70,33 @@
             android:textSize="24sp"
             android:drawableStart="@drawable/ic_baseline_info_24"
             android:drawablePadding="20dp"
+
+            android:inputType="textPassword"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/rePassword"
+            android:layout_margin="10dp"
+            android:background="#30ffffff"
+            android:textColor="@color/lightWhite"
+            android:hint="Confirm Password"
+            android:padding="20dp"
+            android:textColorHint="@color/lightWhite"
+            android:textSize="24sp"
+            android:drawableStart="@drawable/ic_baseline_info_24"
+            android:drawablePadding="20dp"
             android:inputType="textPassword"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <com.google.android.material.checkbox.MaterialCheckBox
-                android:id="@+id/c"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Rember me"
-                android:textColor="@color/white"
-                android:textAlignment="textStart"
-                android:textColorHint="#FFFFFF" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/forgetpass"
-                android:layout_margin="20dp"
-                android:layout_below="@+id/loginbtn"
-                android:text="Forget password?"
-                android:textColor="@color/white" />
-        </LinearLayout>
 
         <com.google.android.material.button.MaterialButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:id="@+id/loginbtn"
-            android:text="SIGN IN"
+            android:text="SIGN UP"
             android:layout_margin="20dp"
+            app:cornerRadius="4dp"
             android:backgroundTint="@color/design_default_color_secondary"
             />
 
@@ -109,7 +120,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/orTxt"
                 android:text="OR"
-               android:layout_centerInParent="true"
+                android:layout_centerInParent="true"
                 android:textSize="12dp"
                 android:textColor="@color/white" />
             <View
@@ -125,7 +136,6 @@
             android:id="@+id/socialIcons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
             android:gravity="center">
 
             <ImageView
@@ -140,12 +150,9 @@
                 android:layout_margin="20dp"
                 android:src="@drawable/fb" />
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_margin="20dp"
-                android:src="@drawable/twitter" />
+
         </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -158,17 +165,17 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:text="Don't have an account? "
+                android:text="@string/signInText"
                 android:textColor="@color/white" />
             <TextView
-                android:id="@+id/signUpTextBtn"
+                android:id="@+id/signInTextBtn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-
-                android:text="Sign Up"
+                android:text=" Sign in"
                 android:textColor="@color/linkColor" />
         </LinearLayout>
+
 
 
 

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">SCM</string>
+    <string name="signInText">Already have an account?</string>
 </resources>
